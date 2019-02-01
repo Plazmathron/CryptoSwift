@@ -34,7 +34,7 @@ public struct CTRXOR: StreamMode {
             throw Error.invalidInitializationVector
         }
         
-        return CTRModeWorker(blockSize: blockSize, iv: iv.slice, counter: counter, cipherOperation: cipherOperation)
+        return CTRXORModeWorker(blockSize: blockSize, iv: iv.slice, counter: counter, cipherOperation: cipherOperation)
     }
 }
 
